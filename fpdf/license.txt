@@ -4,3 +4,20 @@ copies of the software, and to permit persons to whom the software is furnished
 to do so.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+
+
+-- This SQL file creates a table to store user resume data submitted through the HTML form.
+
+CREATE TABLE user_resumes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone VARCHAR(20),
+    address TEXT,
+    profile_picture VARCHAR(255),  -- Store the path to the profile picture
+    summary TEXT,
+    education TEXT,
+    experience TEXT,
+    skills TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
